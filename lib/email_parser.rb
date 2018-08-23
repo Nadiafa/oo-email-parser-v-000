@@ -17,5 +17,7 @@ class EmailParser
   end
 end
 
+EmailParser.new("avi@test.com, arel@test.com")
+
 
 
