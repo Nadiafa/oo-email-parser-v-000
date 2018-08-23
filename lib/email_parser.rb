@@ -4,7 +4,7 @@
 # or whitespace (' ').
 
 class EmailParser 
-
+  attr_accessor :email
   
   def self.parse(csv_data) 
     rows = csv_data.split("\n")
