@@ -3,18 +3,19 @@
 # unique email addresses. The delimiters to support are commas (',')
 # or whitespace (' ').
 
-class EmailParser 
-  attr_accessor :emails
-  
-  def self.parse(emails) 
-    rows = csv_data.split("\n")
-    emails = rows.collect do |row|
-      data = row.split(", ")
-      data
-    end 
-  end 
-  
-end 
+class EmailParser
+  attr_reader :emails
+
+  def initialize(emails)
+    @emails = emails
+  end
+
+  def parse
+    emails.split.map do |email|
+      email.split(',')
+    end.flatten.uniq
+  end
+end
 
 
 
