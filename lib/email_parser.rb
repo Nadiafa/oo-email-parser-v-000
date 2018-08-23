@@ -10,7 +10,7 @@ class EmailParser
     rows = cvs_data.split("\n")
     emails = rows.collect do |row|
       data = row.split(", ")
-      
+      data
     end 
   end 
   
