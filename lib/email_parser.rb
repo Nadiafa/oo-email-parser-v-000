@@ -17,8 +17,8 @@ class EmailParser
   end
 end
 
-EmailParser.new("avi@test.com, arel@test.com")
-EmailParser.new("avi@test.com arel@test.com")
+puts EmailParser.new("avi@test.com, arel@test.com")
+puts EmailParser.new("avi@test.com arel@test.com")
 
 
 
